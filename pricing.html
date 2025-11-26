@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | The Renvo</title>
+    <meta name="description" content="Stop silent money leaks. Premium: $4.99/month or $39/year. AI intelligence that pays for itself.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { 50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1', 800: '#075985', 900: '#0c4a6e' },
+                        accent: { green: '#10b981' }
+                    },
+                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .hover-lift { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .hover-lift:hover { transform: translateY(-4px); box-shadow: 0 12px 24px -8px rgba(0,0,0,0.15); }
+        .gradient-border { background: linear-gradient(135deg, #0ea5e9 0%, #8b5cf6 100%); padding: 2px; border-radius: 1rem; }
+        .gradient-border-inner { background: white; border-radius: calc(1rem - 2px); }
+        .dark .gradient-border-inner { background: #1f2937; }
+        .feature-card { transition: all 0.2s ease; }
+        .feature-card:hover { background-color: #f8fafc; }
+        .dark .feature-card:hover { background-color: #374151; }
+    </style>
+</head>
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+
+    <!-- NAV (EXACTLY AS PROVIDED) -->
+    <nav class="fixed w-full z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-100 dark:border-gray-800" aria-label="Main navigation">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="text-2xl font-bold tracking-tight dark:text-white">The Renvo<span class="text-brand-500">.</span></a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-sm font-medium text-gray-600 hover:text-gray-900 dark:text-gray-300">Home</a>
+                    <a href="features.html" class="text-sm font-medium text-gray-600 hover:text-gray-900 dark:text-gray-300">Features</a>
+                    <a href="pricing.html" class="text-sm font-medium text-gray-900 dark:text-white">Pricing</a>
+                    <a href="#" class="bg-gray-900 dark:bg-white dark:text-gray-900 text-white px-5 py-2 rounded-full text-sm font-medium hover:shadow-lg transition">Download</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 p-4">
+            <a href="features.html" class="block py-2">Features</a>
+            <a href="pricing.html" class="block py-2 font-bold text-brand-600">Pricing</a>
+        </div>
+    </nav>
+
+    <!-- TOP CTA BANNER -->
+
+    <!-- HERO VALUE SUMMARY -->
+    <header class="pt-20 pb-12 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <span class="inline-block bg-brand-100 dark:bg-brand-900 text-brand-700 dark:text-brand-300 text-xs font-bold px-4 py-1.5 rounded-full mb-6 uppercase tracking-wide">Simple, Transparent Pricing</span>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 dark:text-white mb-6 leading-tight">
+                Stop Silent Money Leaks.<br class="hidden md:block"/>
+                <span class="text-brand-600">Protect What You Earn.</span>
+            </h1>
+            <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+                The average person wastes <strong class="text-gray-900 dark:text-white">$240/year</strong> on forgotten subscriptions. 
+                The Renvo finds them before they drain your wallet.
+            </p>
+
+            <!-- VALUE PROPOSITION CARDS -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-12">
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-5 shadow-sm border border-gray-100 dark:border-gray-700">
+                    <div class="text-3xl font-bold text-brand-600 mb-1">$240+</div>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Average yearly savings</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-5 shadow-sm border border-gray-100 dark:border-gray-700">
+                    <div class="text-3xl font-bold text-brand-600 mb-1">2 min</div>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Setup time</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 rounded-xl p-5 shadow-sm border border-gray-100 dark:border-gray-700">
+                    <div class="text-3xl font-bold text-brand-600 mb-1">100%</div>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Money-back guarantee</p>
+                </div>
+            </div>
+
+            <!-- BILLING TOGGLE -->
+            <div class="flex items-center justify-center space-x-4 mb-3">
+                <span id="monthly-label" class="text-sm font-medium text-gray-500 dark:text-gray-400">Monthly</span>
+                <button 
+                    id="billing-toggle" 
+                    class="relative inline-flex h-8 w-16 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 bg-brand-600" 
+                    role="switch" 
+                    aria-checked="true"
+                    aria-labelledby="monthly-label yearly-label"
+                    aria-label="Toggle between monthly and yearly billing"
+                >
+                    <span aria-hidden="true" class="translate-x-8 pointer-events-none inline-block h-7 w-7 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out" id="toggle-knob"></span>
+                </button>
+                <span id="yearly-label" class="text-sm font-medium text-gray-900 dark:text-white">
+                    Yearly 
+                    <span class="inline-block bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 text-xs font-bold px-2.5 py-1 rounded-full ml-1">Save 35%</span>
+                </span>
+            </div>
+            <p class="text-xs text-gray-500 dark:text-gray-400">Most customers choose yearly — it's the smarter value</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- PRICING CARDS -->
+        <section class="py-16 bg-white dark:bg-gray-900" aria-labelledby="pricing-heading">
+            <h2 id="pricing-heading" class="sr-only">Pricing Plans</h2>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+
+                    <!-- FREE CARD -->
+                    <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 flex flex-col hover-lift">
+                        <div class="mb-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Free Forever</h3>
+                                <span class="bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs font-semibold px-3 py-1 rounded-full">STARTER</span>
+                            </div>
+                            <div class="flex items-baseline text-gray-900 dark:text-white">
+                                <span class="text-5xl font-extrabold tracking-tight">$0</span>
+                                <span class="ml-2 text-lg font-medium text-gray-500 dark:text-gray-400">/forever</span>
+                            </div>
+                            <p class="mt-4 text-gray-600 dark:text-gray-400">Perfect for getting started. Track up to 5 subscriptions with essential tools.</p>
+                        </div>
+
+                        <!-- FREE PLAN FEATURES -->
+                        <div class="flex-1 mb-8">
+                            <p class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4">What's Included:</p>
+                            <ul class="space-y-4" aria-label="Free plan features">
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center mt-0.5">
+                                        <svg class="h-4 w-4 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    </div>
+                                    <div class="ml-3">
+                                        <span class="font-medium text-gray-900 dark:text-white">Up to 5 subscriptions</span>
+                                        <p class="text-sm text-gray-500 dark:text-gray-400">Track your most important recurring payments</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center mt-0.5">
+                                        <svg class="h-4 w-4 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    </div>
+                                    <div class="ml-3">
+                                        <span class="font-medium text-gray-900 dark:text-white">Cloud sync across all devices</span>
+                                        <p class="text-sm text-gray-500 dark:text-gray-400">Access your data on phone, tablet, and web</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center mt-0.5">
+                                        <svg class="h-4 w-4 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    </div>
+                                    <div class="ml-3">
+                                        <span class="font-medium text-gray-900 dark:text-white">Renewal reminders</span>
+                                        <p class="text-sm text-gray-500 dark:text-gray-400">Never miss a payment date again</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center mt-0.5">
+                                        <svg class="h-4 w-4 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    </div>
+                                    <div class="ml-3">
+                                        <span class="font-medium text-gray-900 dark:text-white">Basic analytics dashboard</span>
+                                        <p class="text-sm text-gray-500 dark:text-gray-400">See your spending at a glance</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center mt-0.5">
+                                        <svg class="h-4 w-4 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    </div>
+                                    <div class="ml-3">
+                                        <span class="font-medium text-gray-900 dark:text-white">Category organization</span>
+                                        <p class="text-sm text-gray-500 dark:text-gray-400">Group by Entertainment, Productivity, etc.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center mt-0.5">
+                                        <svg class="h-4 w-4 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    </div>
+                                    <div class="ml-3">
+                                        <span class="font-medium text-gray-900 dark:text-white">CSV export</span>
+                                        <p class="text-sm text-gray-500 dark:text-gray-400">Download your data anytime</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center mt-0.5">
+                                        <svg class="h-4 w-4 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    </div>
+                                    <div class="ml-3">
+                                        <span class="font-medium text-gray-900 dark:text-white">Dark mode support</span>
+                                        <p class="text-sm text-gray-500 dark:text-gray-400">Easy on your eyes, day or night</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <a href="#" class="block w-full bg-gray-900 dark:bg-gray-700 text-white text-center rounded-xl py-4 font-semibold hover:bg-gray-800 dark:hover:bg-gray-600 transition">Start Free</a>
+                        <p class="text-center text-xs text-gray-500 dark:text-gray-400 mt-3">No credit card required • No commitment</p>
+                    </div>
+
+                    <!-- PREMIUM CARD -->
+                    <div class="relative">
+                        <div class="gradient-border">
+                            <div class="gradient-border-inner p-8 flex flex-col h-full">
+                                <!-- Most Popular Badge -->
+                                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-brand-600 to-purple-600 text-white text-xs font-bold px-6 py-2 rounded-full shadow-lg uppercase tracking-wide">
+                                    ⭐ Most Popular
+                                </div>
+                                
+                                <div class="mb-6 pt-2">
+                                    <div class="flex items-center justify-between mb-4">
+                                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Premium</h3>
+                                        <span class="bg-brand-100 dark:bg-brand-900 text-brand-700 dark:text-brand-300 text-xs font-semibold px-3 py-1 rounded-full">BEST VALUE</span>
+                                    </div>
+                                    <div class="flex items-baseline text-gray-900 dark:text-white mb-2">
+                                        <span class="text-5xl font-extrabold tracking-tight" id="price-display">$39</span>
+                                        <span class="ml-2 text-lg font-medium text-gray-500 dark:text-gray-400" id="period-display">/year</span>
+                                    </div>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">
+                                        <span class="line-through">$59.88/year</span>
+                                        <span class="text-green-600 dark:text-green-400 font-medium ml-2">Save $20.88</span>
+                                    </p>
+                                    <p class="text-gray-600 dark:text-gray-400">Everything in Free, plus powerful intelligence that finds hidden costs and stops wasted spending.</p>
+                                </div>
+
+                                <!-- PREMIUM FEATURES -->
+                                <div class="flex-1 mb-8">
+                                    <p class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4">Everything in Free, plus:</p>
+                                    <ul class="space-y-4" aria-label="Premium plan features">
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 h-6 w-6 rounded-full bg-brand-100 dark:bg-brand-900 flex items-center justify-center mt-0.5">
+                                                <svg class="h-4 w-4 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                            </div>
+                                            <div class="ml-3">
+                                                <span class="font-medium text-gray-900 dark:text-white">Unlimited subscriptions</span>
+                                                <p class="text-sm text-gray-500 dark:text-gray-400">Track every single recurring payment</p>
+                                            </div>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 h-6 w-6 rounded-full bg-brand-100 dark:bg-brand-900 flex items-center justify-center mt-0.5">
+                                                <svg class="h-4 w-4 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                            </div>
+                                            <div class="ml-3">
+                                                <span class="font-medium text-gray-900 dark:text-white">AI Savings Coach</span>
+                                                <p class="text-sm text-gray-500 dark:text-gray-400">Personal advice to save on every subscription</p>
+                                            </div>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 h-6 w-6 rounded-full bg-brand-100 dark:bg-brand-900 flex items-center justify-center mt-0.5">
+                                                <svg class="h-4 w-4 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                            </div>
+                                            <div class="ml-3">
+                                                <span class="font-medium text-gray-900 dark:text-white">Smart Detection Suite</span>
+                                                <p class="text-sm text-gray-500 dark:text-gray-400">Hidden costs, per-day calculator, burn rate</p>
+                                            </div>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 h-6 w-6 rounded-full bg-brand-100 dark:bg-brand-900 flex items-center justify-center mt-0.5">
+                                                <svg class="h-4 w-4 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                            </div>
+                                            <div class="ml-3">
+                                                <span class="font-medium text-gray-900 dark:text-white">Auto cancellation links</span>
+                                                <p class="text-sm text-gray-500 dark:text-gray-400">One-click cancel guidance for any service</p>
+                                            </div>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 h-6 w-6 rounded-full bg-brand-100 dark:bg-brand-900 flex items-center justify-center mt-0.5">
+                                                <svg class="h-4 w-4 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                            </div>
+                                            <div class="ml-3">
+                                                <span class="font-medium text-gray-900 dark:text-white">Offline mode + Cloud Sync</span>
+                                                <p class="text-sm text-gray-500 dark:text-gray-400">Access your data anywhere, anytime</p>
+                                            </div>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <div class="flex-shrink-0 h-6 w-6 rounded-full bg-brand-100 dark:bg-brand-900 flex items-center justify-center mt-0.5">
+                                                <svg class="h-4 w-4 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                            </div>
+                                            <div class="ml-3">
+                                                <span class="font-medium text-gray-900 dark:text-white">Secure Supabase backend</span>
+                                                <p class="text-sm text-gray-500 dark:text-gray-400">Bank-level encryption for your data</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Value Box -->
+                                <div class="bg-gradient-to-r from-brand-50 to-purple-50 dark:from-brand-900/30 dark:to-purple-900/30 rounded-xl p-4 mb-6 border border-brand-100 dark:border-brand-800">
+                                    <p class="text-sm text-center">
+                                        <span class="font-bold text-brand-700 dark:text-brand-300">💡 One forgotten $15/month subscription = $180/year.</span><br/>
+                                        <span class="text-gray-600 dark:text-gray-400">Premium finds it for just $39/year. The math is obvious.</span>
+                                    </p>
+                                </div>
+
+                                <a href="#" class="block w-full bg-gradient-to-r from-brand-600 to-brand-700 text-white text-center rounded-xl py-4 font-bold text-lg hover:from-brand-700 hover:to-brand-800 transition shadow-lg hover-lift">
+                                    Upgrade to Premium
+                                </a>
+                                <p class="text-center text-xs text-gray-500 dark:text-gray-400 mt-3">7-day money-back guarantee • Cancel anytime</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMPLETE FEATURE BREAKDOWN -->
+        <section class="py-20 bg-gray-50 dark:bg-gray-800" aria-labelledby="feature-breakdown-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="inline-block bg-brand-100 dark:bg-brand-900 text-brand-700 dark:text-brand-300 text-xs font-bold px-4 py-1.5 rounded-full mb-4 uppercase tracking-wide">Complete Feature Breakdown</span>
+                    <h2 id="feature-breakdown-heading" class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Every Feature, Explained</h2>
+                    <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">See exactly what's included in each plan. No hidden surprises, no confusing fine print.</p>
+                </div>
+
+                <!-- CATEGORY 1: CORE FEATURES -->
+                <div class="mb-16">
+                    <div class="flex items-center mb-8">
+                        <div class="flex-shrink-0 h-12 w-12 rounded-xl bg-gray-900 dark:bg-gray-700 flex items-center justify-center mr-4">
+                            <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Core Features</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Essential subscription management tools</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        
+                        <!-- Core Feature 1 -->
+                        <div class="feature-card bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="h-10 w-10 rounded-lg bg-green-100 dark:bg-green-900 flex items-center justify-center">
+                                    <svg class="h-5 w-5 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                                </div>
+                                <span class="text-xs font-semibold bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-2.5 py-1 rounded-full">Free</span>
+                            </div>
+                            <h4 class="font-bold text-gray-900 dark:text-white mb-2">Up to 5 Subscriptions</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Track your most important recurring payments. Perfect for getting started and seeing immediate value.</p>
+                            <p class="text-xs text-brand-600 dark:text-brand-400 font-medium">✓ Enough for Netflix, Spotify, gym, cloud storage, and one more</p>
+                        </div>
+
+                        <!-- Core Feature 2 -->
+                        <div class="feature-card bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="h-10 w-10 rounded-lg bg-green-100 dark:bg-green-900 flex items-center justify-center">
+                                    <svg class="h-5 w-5 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
+                                </div>
+                                <span class="text-xs font-semibold bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-2.5 py-1 rounded-full">Free</span>
+                            </div>
+                            <h4 class="font-bold text-gray-900 dark:text-white mb-2">Cloud Sync Across Devices</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Your subscription data follows you everywhere. Update on your phone, see changes on your tablet instantly.</p>
+                            <p class="text-xs text-brand-600 dark:text-brand-400 font-medium">✓ Phone, tablet, and web — always in sync</p>
+                        </div>
+
+                        <!-- Core Feature 3 -->
+                        <div class="feature-card bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="h-10 w-10 rounded-lg bg-green-100 dark:bg-green-900 flex items-center justify-center">
+                                    <svg class="h-5 w-5 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+                                </div>
+                                <span class="text-xs font-semibold bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-2.5 py-1 rounded-full">Free</span>
+                            </div>
+                            <h4 class="font-bold text-gray-900 dark:text-white mb-2">Renewal Reminders</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Get notified before any subscription renews. Cancel before you're charged for something you don't use.</p>
+                            <p class="text-xs text-brand-600 dark:text-brand-400 font-medium">✓ 3-day advance warning keeps you in control</p>
+                        </div>
+
+                        <!-- Core Feature 4 -->
+                        <div class="feature-card bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="h-10 w-10 rounded-lg bg-green-100 dark:bg-green-900 flex items-center justify-center">
+                                    <svg class="h-5 w-5 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                                </div>
+                                <span class="text-xs font-semibold bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-2.5 py-1 rounded-full">Free</span>
+                            </div>
+                            <h4 class="font-bold text-gray-900 dark:text-white mb-2">Basic Analytics Dashboard</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">See your total monthly and yearly spending at a glance. Understand where your money goes each month.</p>
+                            <p class="text-xs text-brand-600 dark:text-brand-400 font-medium">✓ Monthly spending charts and totals</p>
+                        </div>
+
+                        <!-- Core Feature 5 -->
+                        <div class="feature-card bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="h-10 w-10 rounded-lg bg-green-100 dark:bg-green-900 flex items-center justify-center">
+                                    <svg class="h-5 w-5 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path></svg>
+                                </div>
+                                <span class="text-xs font-semibold bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-2.5 py-1 rounded-full">Free</span>
+                            </div>
+                            <h4 class="font-bold text-gray-900 dark:text-white mb-2">Category Organization</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Group your subscriptions by type — Entertainment, Productivity, Health, Utilities — for better clarity.</p>
+                            <p class="text-xs text-brand-600 dark:text-brand-400 font-medium">✓ See which categories drain your wallet fastest</p>
+                        </div>
+
+                        <!-- Core Feature 6 -->
+                        <div class="feature-card bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="h-10 w-10 rounded-lg bg-green-100 dark:bg-green-900 flex items-center justify-center">
+                                    <svg class="h-5 w-5 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                </div>
+                                <span class="text-xs font-semibold bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-2.5 py-1 rounded-full">Free</span>
+                            </div>
+                            <h4 class="font-bold text-gray-900 dark:text-white mb-2">CSV Export</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Download all your subscription data anytime. Use it in spreadsheets, share with your accountant, or keep for records.</p>
+                            <p class="text-xs text-brand-600 dark:text-brand-400 font-medium">✓ One-click download, your data is always yours</p>
+                        </div>
+
+                        <!-- Core Feature 7 -->
+                        <div class="feature-card bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="h-10 w-10 rounded-lg bg-green-100 dark:bg-green-900 flex items-center justify-center">
+                                    <svg class="h-5 w-5 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                                </div>
+                                <span class="text-xs font-semibold bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-2.5 py-1 rounded-full">Free</span>
+                            </div>
+                            <h4 class="font-bold text-gray-900 dark:text-white mb-2">Dark Mode Support</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Easy on your eyes at any hour. Switch between light and dark themes based on your preference or time of day.</p>
+                            <p class="text-xs text-brand-600 dark:text-brand-400 font-medium">✓ Automatic or manual theme switching</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- CATEGORY 2: SMART DETECTION -->
+                <div class="mb-16">
+                    <div class="flex items-center mb-8">
+                        <div class="flex-shrink-0 h-12 w-12 rounded-xl bg-purple-600 flex items-center justify-center mr-4">
+                            <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Smart Detection</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Intelligent insights that find money you're wasting</p>
+                        </div>
+                        <span class="ml-auto bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-xs font-bold px-3 py-1 rounded-full">PREMIUM</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                        <!-- Smart Detection 1 -->
+                        <div class="feature-card bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="h-10 w-10 rounded-lg bg-purple-100 dark:bg-purple-900 flex items-center justify-center">
+                                    <svg class="h-5 w-5 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                </div>
+                                <span class="text-xs font-semibold bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2.5 py-1 rounded-full">Premium</span>
+                            </div>
+                            <h4 class="font-bold text-gray-900 dark:text-white mb-2">Per-Day Cost Calculator</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">See what each subscription truly costs per day. Suddenly that "cheap" $15/month service reveals itself as $0.50 daily drain.</p>
+                            <p class="text-xs text-brand-600 dark:text-brand-400 font-medium">✓ Netflix = $0.52/day — is it worth it?</p>
+                        </div>
+
+                        <!-- Smart Detection 2 -->
+                        <div class="feature-card bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="h-10 w-10 rounded-lg bg-purple-100 dark:bg-purple-900 flex items-center justify-center">
+                                    <svg class="h-5 w-5 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                                </div>
+                                <span class="text-xs font-semibold bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2.5 py-1 rounded-full">Premium</span>
+                            </div>
+                            <h4 class="font-bold text-gray-900 dark:text-white mb-2">Hidden Costs Detector</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Surfaces fees, taxes, trial conversions, and add-ons you may have missed. Stop paying for things you didn't know about.</p>
+                            <p class="text-xs text-brand-600 dark:text-brand-400 font-medium">✓ Found $3.99 hidden fee in your Adobe plan</p>
+                        </div>
+
+                        <!-- Smart Detection 3 -->
+                        <div class="feature-card bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="h-10 w-10 rounded-lg bg-purple-100 dark:bg-purple-900 flex items-center justify-center">
+                                    <svg class="h-5 w-5 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                </div>
+                                <span class="text-xs font-semibold bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2.5 py-1 rounded-full">Premium</span>
+                            </div>
+                            <h4 class="font-bold text-gray-900 dark:text-white mb-2">Price Comparison Table</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Compare competitor prices instantly. See if Hulu, Netflix, or Disney+ gives you better value for similar content.</p>
+                            <p class="text-xs text-brand-600 dark:text-brand-400 font-medium">✓ Side-by-side streaming comparison</p>
+                        </div>
+
+                        <!-- Smart Detection 4 -->
+                        <div class="feature-card bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="h-10 w-10 rounded-lg bg-purple-100 dark:bg-purple-900 flex items-center justify-center">
+                                    <svg class="h-5 w-5 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                                </div>
+                                <span class="text-xs font-semibold bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2.5 py-1 rounded-full">Premium</span>
+                            </div>
+                            <h4 class="font-bold text-gray-900 dark:text-white mb-2">Annual Savings Tracker</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">See cumulative savings from cancellations and plan changes. Proof that your attention to subscriptions pays off.</p>
+                            <p class="text-xs text-brand-600 dark:text-brand-400 font-medium">✓ "You've saved $312 this year"</p>
+                        </div>
+
+                        <!-- Smart Detection 5 -->
+                        <div class="feature-card bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="h-10 w-10 rounded-lg bg-purple-100 dark:bg-purple-900 flex items-center justify-center">
+                                    <svg class="h-5 w-5 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"></path></svg>
+                                </div>
+                                <span class="text-xs font-semibold bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2.5 py-1 rounded-full">Premium</span>
+                            </div>
+                            <h4 class="font-bold text-gray-900 dark:text-white mb-2">Category Burn Rate</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">See which categories drain your wallet fastest. Entertainment eating $89/month? Time to reconsider some services.</p>
+                            <p class="text-xs text-brand-600 dark:text-brand-400 font-medium">✓ Entertainment: $89/mo, Productivity: $24/mo</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- CATEGORY 3: AI ENHANCEMENTS -->
+                <div class="mb-16">
+                    <div class="flex items-center mb-8">
+                        <div class="flex-shrink-0 h-12 w-12 rounded-xl bg-gradient-to-br from-brand-500 to-purple-600 flex items-center justify-center mr-4">
+                            <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">AI Enhancements</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Intelligent recommendations powered by machine learning</p>
+                        </div>
+                        <span class="ml-auto bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-xs font-bold px-3 py-1 rounded-full">PREMIUM</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                        <!-- AI Feature 1 -->
+                        <div class="feature-card bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="h-10 w-10 rounded-lg bg-gradient-to-br from-brand-100 to-purple-100 dark:from-brand-900 dark:to-purple-900 flex items-center justify-center">
+                                    <svg class="h-5 w-5 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                </div>
+                                <span class="text-xs font-semibold bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2.5 py-1 rounded-full">Premium</span>
+                            </div>
+                            <h4 class="font-bold text-gray-900 dark:text-white mb-2">AI Savings Coach</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Personal advice that recommends cheaper plans, bundles, and optimal timing for upgrades or cancellations.</p>
+                            <p class="text-xs text-brand-600 dark:text-brand-400 font-medium">✓ "Switch to annual Spotify — save $47/year"</p>
+                        </div>
+
+                        <!-- AI Feature 2 -->
+                        <div class="feature-card bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="h-10 w-10 rounded-lg bg-gradient-to-br from-brand-100 to-purple-100 dark:from-brand-900 dark:to-purple-900 flex items-center justify-center">
+                                    <svg class="h-5 w-5 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-xs font-semibold bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2.5 py-1 rounded-full">Premium</span>
+                                </div>
+                            </div>
+                            <h4 class="font-bold text-gray-900 dark:text-white mb-2">AI Cancel Suggestions</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Detects unused services based on your patterns and suggests cancellations with direct action links.</p>
+                            <p class="text-xs text-brand-600 dark:text-brand-400 font-medium">✓ "You haven't used Headspace in 90 days"</p>
+                        </div>
+
+                        <!-- AI Feature 3 -->
+                        <div class="feature-card bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="h-10 w-10 rounded-lg bg-gradient-to-br from-brand-100 to-purple-100 dark:from-brand-900 dark:to-purple-900 flex items-center justify-center">
+                                    <svg class="h-5 w-5 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
+                                </div>
+                                <span class="text-xs font-semibold bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2.5 py-1 rounded-full">Premium</span>
+                            </div>
+                            <h4 class="font-bold text-gray-900 dark:text-white mb-2">AI Plan Optimization</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Finds cheaper pricing tiers or bundles without losing features. Suggests optimal plan combinations.</p>
+                            <p class="text-xs text-brand-600 dark:text-brand-400 font-medium">✓ "Switch to annual plan — save 20%"</p>
+                        </div>
+
+                        <!-- AI Feature 4 -->
+                        <div class="feature-card bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="h-10 w-10 rounded-lg bg-gradient-to-br from-brand-100 to-purple-100 dark:from-brand-900 dark:to-purple-900 flex items-center justify-center">
+                                    <svg class="h-5 w-5 text-brand-600 dark:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-xs font-semibold bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 px-2 py-0.5 rounded-full">Soon</span>
+                                    <span class="text-xs font-semibold bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2.5 py-1 rounded-full">Premium</span>
+                                </div>
+                            </div>
+                            <h4 class="font-bold text-gray-900 dark:text-white mb-2">AI Price Increase Alerts</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Get notified when providers raise prices on your tracked subscriptions. Decide to keep or cancel before the change hits.</p>
+                            <p class="text-xs text-brand-600 dark:text-brand-400 font-medium">✓ "Spotify increased by $1/mo next month"</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- CATEGORY 4: AUTOMATION & ALERTS -->
+                <div class="mb-16">
+                    <div class="flex items-center mb-8">
+                        <div class="flex-shrink-0 h-12 w-12 rounded-xl bg-orange-500 flex items-center justify-center mr-4">
+                            <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Automation & Alerts</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Take action without the hassle</p>
+                        </div>
+                        <span class="ml-auto bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-xs font-bold px-3 py-1 rounded-full">PREMIUM</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                        <!-- Automation Feature 1 -->
+                        <div class="feature-card bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="h-10 w-10 rounded-lg bg-orange-100 dark:bg-orange-900 flex items-center justify-center">
+                                    <svg class="h-5 w-5 text-orange-600 dark:text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+                                </div>
+                                <span class="text-xs font-semibold bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2.5 py-1 rounded-full">Premium</span>
+                            </div>
+                            <h4 class="font-bold text-gray-900 dark:text-white mb-2">Auto Cancellation Links</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Direct links to each service's cancellation page. No more hunting through settings or dealing with dark patterns.</p>
+                            <p class="text-xs text-brand-600 dark:text-brand-400 font-medium">✓ Cancel Adobe in 2 clicks, not 20</p>
+                        </div>
+
+                        <!-- Automation Feature 2 -->
+                        <div class="feature-card bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="h-10 w-10 rounded-lg bg-orange-100 dark:bg-orange-900 flex items-center justify-center">
+                                    <svg class="h-5 w-5 text-orange-600 dark:text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+                                </div>
+                                <span class="text-xs font-semibold bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2.5 py-1 rounded-full">Premium</span>
+                            </div>
+                            <h4 class="font-bold text-gray-900 dark:text-white mb-2">Cancellation Guidance</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Step-by-step instructions for canceling each service. We guide you through even the trickiest processes.</p>
+                            <p class="text-xs text-brand-600 dark:text-brand-400 font-medium">✓ "Step 1: Go to Settings → Account..."</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- CATEGORY 5: PLATFORM & SECURITY -->
+                <div class="mb-8">
+                    <div class="flex items-center mb-8">
+                        <div class="flex-shrink-0 h-12 w-12 rounded-xl bg-green-600 flex items-center justify-center mr-4">
+                            <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Platform & Security</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Enterprise-grade protection for your data</p>
+                        </div>
+                        <span class="ml-auto bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-xs font-bold px-3 py-1 rounded-full">PREMIUM</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                        <!-- Platform Feature 1 -->
+                        <div class="feature-card bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="h-10 w-10 rounded-lg bg-green-100 dark:bg-green-900 flex items-center justify-center">
+                                    <svg class="h-5 w-5 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                                </div>
+                                <span class="text-xs font-semibold bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2.5 py-1 rounded-full">Premium</span>
+                            </div>
+                            <h4 class="font-bold text-gray-900 dark:text-white mb-2">Secure Supabase Backend</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Your data is encrypted and stored using Supabase best practices. Bank-level security for your financial information.</p>
+                            <p class="text-xs text-brand-600 dark:text-brand-400 font-medium">✓ AES-256 encryption, SOC 2 compliant</p>
+                        </div>
+
+                        <!-- Platform Feature 2 -->
+                        <div class="feature-card bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="h-10 w-10 rounded-lg bg-green-100 dark:bg-green-900 flex items-center justify-center">
+                                    <svg class="h-5 w-5 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414"></path></svg>
+</div>
+<span class="text-xs font-semibold bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2.5 py-1 rounded-full">Premium</span>
+</div>
+<h4 class="font-bold text-gray-900 dark:text-white mb-2">Offline Mode</h4>
+<p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Access your subscriptions even without internet. Changes sync automatically when you're back online.</p>
+<p class="text-xs text-brand-600 dark:text-brand-400 font-medium">✓ Works on airplane mode, subway, anywhere</p>
+</div>
+                    <!-- Platform Feature 3 -->
+                    <div class="feature-card bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="h-10 w-10 rounded-lg bg-green-100 dark:bg-green-900 flex items-center justify-center">
+                                <svg class="h-5 w-5 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <span class="text-xs font-semibold bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2.5 py-1 rounded-full">Premium</span>
+                        </div>
+                        <h4 class="font-bold text-gray-900 dark:text-white mb-2">iOS & Android Support</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Native-ready experience on both platforms. Deep-linking, push notifications, and smooth performance everywhere.</p>
+                        <p class="text-xs text-brand-600 dark:text-brand-400 font-medium">✓ App Store & Play Store optimized</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FEATURE COMPARISON TABLE -->
+    <section class="py-20 bg-white dark:bg-gray-900" aria-labelledby="comparison-table-heading">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 id="comparison-table-heading" class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Quick Comparison</h2>
+                <p class="text-gray-600 dark:text-gray-400">See all features side-by-side at a glance</p>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full border-collapse">
+                    <thead>
+                        <tr class="border-b-2 border-gray-200 dark:border-gray-700">
+                            <th class="text-left py-4 px-4 font-semibold text-gray-900 dark:text-white">Feature</th>
+                            <th class="text-center py-4 px-4 font-semibold text-gray-900 dark:text-white">Free</th>
+                            <th class="text-center py-4 px-4 font-semibold text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-brand-900/20 rounded-t-lg">Premium</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100 dark:divide-gray-800">
+                        <!-- Core Features -->
+                        <tr class="bg-gray-50 dark:bg-gray-800">
+                            <td colspan="3" class="py-3 px-4 font-bold text-gray-900 dark:text-white text-sm uppercase tracking-wider">Core Features</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-gray-700 dark:text-gray-300">Subscriptions limit</td>
+                            <td class="py-3 px-4 text-center text-gray-600 dark:text-gray-400">Up to 5</td>
+                            <td class="py-3 px-4 text-center bg-brand-50/50 dark:bg-brand-900/10 font-medium text-gray-900 dark:text-white">Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-gray-700 dark:text-gray-300">Cloud sync across devices</td>
+                            <td class="py-3 px-4 text-center"><svg class="h-5 w-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                            <td class="py-3 px-4 text-center bg-brand-50/50 dark:bg-brand-900/10"><svg class="h-5 w-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-gray-700 dark:text-gray-300">Renewal reminders</td>
+                            <td class="py-3 px-4 text-center"><svg class="h-5 w-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                            <td class="py-3 px-4 text-center bg-brand-50/50 dark:bg-brand-900/10"><svg class="h-5 w-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-gray-700 dark:text-gray-300">Basic analytics dashboard</td>
+                            <td class="py-3 px-4 text-center"><svg class="h-5 w-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                            <td class="py-3 px-4 text-center bg-brand-50/50 dark:bg-brand-900/10"><svg class="h-5 w-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-gray-700 dark:text-gray-300">Category organization</td>
+                            <td class="py-3 px-4 text-center"><svg class="h-5 w-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                            <td class="py-3 px-4 text-center bg-brand-50/50 dark:bg-brand-900/10"><svg class="h-5 w-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-gray-700 dark:text-gray-300">CSV export</td>
+                            <td class="py-3 px-4 text-center"><svg class="h-5 w-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                            <td class="py-3 px-4 text-center bg-brand-50/50 dark:bg-brand-900/10"><svg class="h-5 w-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-gray-700 dark:text-gray-300">Dark mode support</td>
+                            <td class="py-3 px-4 text-center"><svg class="h-5 w-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                            <td class="py-3 px-4 text-center bg-brand-50/50 dark:bg-brand-900/10"><svg class="h-5 w-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                        </tr>
+
+                        <!-- Smart Detection -->
+                        <tr class="bg-gray-50 dark:bg-gray-800">
+                            <td colspan="3" class="py-3 px-4 font-bold text-gray-900 dark:text-white text-sm uppercase tracking-wider">Smart Detection</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-gray-700 dark:text-gray-300">Per-Day Cost Calculator</td>
+                            <td class="py-3 px-4 text-center"><svg class="h-5 w-5 text-gray-300 dark:text-gray-600 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></td>
+                            <td class="py-3 px-4 text-center bg-brand-50/50 dark:bg-brand-900/10"><svg class="h-5 w-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-gray-700 dark:text-gray-300">Hidden Costs Detector</td>
+                            <td class="py-3 px-4 text-center"><svg class="h-5 w-5 text-gray-300 dark:text-gray-600 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></td>
+                            <td class="py-3 px-4 text-center bg-brand-50/50 dark:bg-brand-900/10"><svg class="h-5 w-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-gray-700 dark:text-gray-300">Price Comparison Table</td>
+                            <td class="py-3 px-4 text-center"><svg class="h-5 w-5 text-gray-300 dark:text-gray-600 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></td>
+                            <td class="py-3 px-4 text-center bg-brand-50/50 dark:bg-brand-900/10"><svg class="h-5 w-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-gray-700 dark:text-gray-300">Annual Savings Tracker</td>
+                            <td class="py-3 px-4 text-center"><svg class="h-5 w-5 text-gray-300 dark:text-gray-600 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></td>
+                            <td class="py-3 px-4 text-center bg-brand-50/50 dark:bg-brand-900/10"><svg class="h-5 w-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-gray-700 dark:text-gray-300">Category Burn Rate</td>
+                            <td class="py-3 px-4 text-center"><svg class="h-5 w-5 text-gray-300 dark:text-gray-600 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></td>
+                            <td class="py-3 px-4 text-center bg-brand-50/50 dark:bg-brand-900/10"><svg class="h-5 w-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                        </tr>
+
+                        <!-- AI Enhancements -->
+                        <tr class="bg-gray-50 dark:bg-gray-800">
+                            <td colspan="3" class="py-3 px-4 font-bold text-gray-900 dark:text-white text-sm uppercase tracking-wider">AI Enhancements</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-gray-700 dark:text-gray-300">AI Savings Coach</td>
+                            <td class="py-3 px-4 text-center"><svg class="h-5 w-5 text-gray-300 dark:text-gray-600 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></td>
+                            <td class="py-3 px-4 text-center bg-brand-50/50 dark:bg-brand-900/10"><svg class="h-5 w-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-gray-700 dark:text-gray-300">AI Cancel Suggestions</td>
+                            <td class="py-3 px-4 text-center"><svg class="h-5 w-5 text-gray-300 dark:text-gray-600 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></td>
+                            <td class="py-3 px-4 text-center bg-brand-50/50 dark:bg-brand-900/10"><svg class="h-5 w-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-gray-700 dark:text-gray-300">AI Plan Optimization</td>
+                            <td class="py-3 px-4 text-center"><svg class="h-5 w-5 text-gray-300 dark:text-gray-600 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></td>
+                            <td class="py-3 px-4 text-center bg-brand-50/50 dark:bg-brand-900/10"><svg class="h-5 w-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-gray-700 dark:text-gray-300">AI Price Increase Alerts <span class="text-xs text-gray-400">(coming soon)</span></td>
+                            <td class="py-3 px-4 text-center"><svg class="h-5 w-5 text-gray-300 dark:text-gray-600 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></td>
+                            <td class="py-3 px-4 text-center bg-brand-50/50 dark:bg-brand-900/10"><svg class="h-5 w-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                        </tr>
+
+                        <!-- Automation & Alerts -->
+                        <tr class="bg-gray-50 dark:bg-gray-800">
+                            <td colspan="3" class="py-3 px-4 font-bold text-gray-900 dark:text-white text-sm uppercase tracking-wider">Automation & Alerts</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-gray-700 dark:text-gray-300">Auto cancellation links</td>
+                            <td class="py-3 px-4 text-center"><svg class="h-5 w-5 text-gray-300 dark:text-gray-600 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></td>
+                            <td class="py-3 px-4 text-center bg-brand-50/50 dark:bg-brand-900/10"><svg class="h-5 w-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-gray-700 dark:text-gray-300">Cancellation guidance</td>
+                            <td class="py-3 px-4 text-center"><svg class="h-5 w-5 text-gray-300 dark:text-gray-600 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></td>
+                            <td class="py-3 px-4 text-center bg-brand-50/50 dark:bg-brand-900/10"><svg class="h-5 w-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                        </tr>
+
+                        <!-- Platform & Security -->
+                        <tr class="bg-gray-50 dark:bg-gray-800">
+                            <td colspan="3" class="py-3 px-4 font-bold text-gray-900 dark:text-white text-sm uppercase tracking-wider">Platform & Security</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-gray-700 dark:text-gray-300">Secure Supabase backend</td>
+                            <td class="py-3 px-4 text-center"><svg class="h-5 w-5 text-gray-300 dark:text-gray-600 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></td>
+                            <td class="py-3 px-4 text-center bg-brand-50/50 dark:bg-brand-900/10"><svg class="h-5 w-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-gray-700 dark:text-gray-300">Offline mode</td>
+                            <td class="py-3 px-4 text-center"><svg class="h-5 w-5 text-gray-300 dark:text-gray-600 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></td>
+                            <td class="py-3 px-4 text-center bg-brand-50/50 dark:bg-brand-900/10"><svg class="h-5 w-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 text-gray-700 dark:text-gray-300">iOS & Android support</td>
+                            <td class="py-3 px-4 text-center"><svg class="h-5 w-5 text-gray-300 dark:text-gray-600 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></td>
+                            <td class="py-3 px-4 text-center bg-brand-50/50 dark:bg-brand-900/10"><svg class="h-5 w-5 text-green-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST SECTION -->
+    <section class="py-16 bg-gray-50 dark:bg-gray-800" aria-labelledby="trust-heading">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 id="trust-heading" class="text-2xl md:text-3xl font-bold mb-4 text-gray-900 dark:text-white">Bank-Level Security. Your Data Stays Yours.</h2>
+            <p class="text-gray-600 dark:text-gray-400 mb-10 max-w-2xl mx-auto">We never sell your data. We never share your data. Cancel anytime with zero friction.</p>
+            <div class="flex flex-wrap justify-center gap-8 md:gap-12">
+                <div class="flex flex-col items-center">
+                    <div class="h-14 w-14 rounded-full bg-brand-100 dark:bg-brand-900 flex items-center justify-center mb-3">
+                        <svg class="w-7 h-7 text-brand-600 dark:text-brand-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    </div>
+                    <span class="font-semibold text-gray-900 dark:text-white">Secure Supabase</span>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">AES-256 encryption</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="h-14 w-14 rounded-full bg-brand-100 dark:bg-brand-900 flex items-center justify-center mb-3">
+                        <svg class="w-7 h-7 text-brand-600 dark:text-brand-400" fill="currentColor" viewBox="0 0 20 20"><path d="M5.5 16a3.5 3.5 0 01-.369-6.98 4 4 0 117.753-1.977A4.5 4.5 0 1113.5 16h-8z"/></svg>
+                    </div>
+                    <span class="font-semibold text-gray-900 dark:text-white">Cloud Sync</span>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">All devices, always</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="h-14 w-14 rounded-full bg-brand-100 dark:bg-brand-900 flex items-center justify-center mb-3">
+                        <svg class="w-7 h-7 text-brand-600 dark:text-brand-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.707 2.293a1 1 0 00-1.414 1.414l14 14a1 1 0 001.414-1.414l-1.473-1.473A10.014 10.014 0 0019.542 10C18.268 5.943 14.478 3 10 3a9.958 9.958 0 00-4.512 1.074l-1.78-1.781zm4.261 4.26l1.514 1.515a2.003 2.003 0 012.45 2.45l1.514 1.514a4 4 0 00-5.478-5.478z" clip-rule="evenodd"/></svg>
+                    </div>
+                    <span class="font-semibold text-gray-900 dark:text-white">Privacy First</span>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">Zero data selling</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="h-14 w-14 rounded-full bg-brand-100 dark:bg-brand-900 flex items-center justify-center mb-3">
+                        <svg class="w-7 h-7 text-brand-600 dark:text-brand-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"/></svg>
+                    </div>
+                    <span class="font-semibold text-gray-900 dark:text-white">Auto Backups</span>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">Never lose data</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="py-20 bg-white dark:bg-gray-900" aria-labelledby="faq-heading">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 id="faq-heading" class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-600 dark:text-gray-400">Everything you need to know before getting started</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
+                    <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between" aria-expanded="false">
+                        <span class="font-semibold text-gray-900 dark:text-white">Why should I upgrade to Premium?</span>
+                        <svg class="faq-icon h-5 w-5 text-gray-500 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5">
+                        <p class="text-gray-600 dark:text-gray-400">Premium unlocks unlimited subscription tracking, AI-powered savings recommendations, hidden cost detection, and one-click cancellation links. The average user finds $240+ in yearly savings — Premium pays for itself with just one forgotten subscription caught.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
+                    <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between" aria-expanded="false">
+                        <span class="font-semibold text-gray-900 dark:text-white">What exactly does Premium unlock?</span>
+                        <svg class="faq-icon h-5 w-5 text-gray-500 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5">
+                        <p class="text-gray-600 dark:text-gray-400 mb-3">Premium includes everything in Free plus:</p>
+                        <ul class="text-gray-600 dark:text-gray-400 space-y-1 list-disc list-inside">
+                            <li>Unlimited subscriptions (vs. 5 in Free)</li>
+                            <li>AI Savings Coach & Cancel Suggestions</li>
+                            <li>Per-Day Cost Calculator & Hidden Costs Detector</li>
+                            <li>Price Comparison Table & Annual Savings Tracker</li>
+                            <li>Category Burn Rate analysis</li>
+                            <li>Auto cancellation links + step-by-step guidance</li>
+                            <li>Offline mode + Secure Supabase backend</li>
+                            <li>Full iOS & Android support</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
+                    <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between" aria-expanded="false">
+                        <span class="font-semibold text-gray-900 dark:text-white">Is my data safe?</span>
+                        <svg class="faq-icon h-5 w-5 text-gray-500 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5">
+                        <p class="text-gray-600 dark:text-gray-400">Absolutely. We use Supabase with AES-256 encryption — the same standard banks use. We never sell your data, never share it with third parties, and you can export or delete everything at any time. Your subscription data belongs to you, period.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
+                    <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between" aria-expanded="false">
+                        <span class="font-semibold text-gray-900 dark:text-white">Does the Free plan expire?</span>
+                        <svg class="faq-icon h-5 w-5 text-gray-500 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5">
+                        <p class="text-gray-600 dark:text-gray-400">Never. Free is free forever — no trials, no expiration dates, no bait-and-switch. You can use the Free plan indefinitely with up to 5 subscriptions, cloud sync, renewal reminders, and basic analytics. Upgrade only when you need more.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
+                    <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between" aria-expanded="false">
+                        <span class="font-semibold text-gray-900 dark:text-white">Is AI required to use The Renvo?</span>
+                        <svg class="faq-icon h-5 w-5 text-gray-500 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5">
+                        <p class="text-gray-600 dark:text-gray-400">Not at all. The Renvo works perfectly as a manual subscription tracker without any AI features. The Free plan has zero AI — it's pure subscription management. AI features in Premium are optional enhancements that provide smart recommendations, but you're always in control.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
+                    <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between" aria-expanded="false">
+                        <span class="font-semibold text-gray-900 dark:text-white">Can I cancel Premium anytime?</span>
+                        <svg class="faq-icon h-5 w-5 text-gray-500 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5">
+                        <p class="text-gray-600 dark:text-gray-400">Yes, zero friction. Cancel in two taps from the app settings. You'll keep Premium features until the end of your billing period, then automatically revert to Free. We also offer a 7-day money-back guarantee if Premium isn't right for you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="py-20 bg-gradient-to-br from-brand-600 to-brand-800" aria-labelledby="final-cta-heading">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 id="final-cta-heading" class="text-3xl md:text-5xl font-extrabold text-white mb-6">Ready to Stop Wasting Money?</h2>
+            <p class="text-xl text-brand-100 mb-10 max-w-2xl mx-auto">Join thousands who've taken control of their subscriptions. Start free today, upgrade when you're ready.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#" class="inline-block bg-white text-brand-700 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition shadow-lg hover-lift">Start Free — No Credit Card</a>
+                <a href="#" class="inline-block bg-brand-700 text-white px-10 py-4 rounded-xl font-bold text-lg border-2 border-brand-400 hover:bg-brand-800 transition">Upgrade to Premium</a>
+            </div>
+            <p class="mt-8 text-sm text-brand-200">Available on iOS and Android • Upgrade anytime from the app</p>
+        </div>
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0">
+                <a href="index.html" class="text-2xl font-bold">The Renvo<span class="text-brand-500">.</span></a>
+                <p class="text-gray-400 text-sm mt-2">Stop silent money leaks. Protect what you earn.</p>
+            </div>
+            <div class="flex space-x-8">
+                <a href="index.html" class="text-gray-400 hover:text-white transition">Home</a>
+                <a href="features.html" class="text-gray-400 hover:text-white transition">Features</a>
+                <a href="pricing.html" class="text-white">Pricing</a>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+            <p class="text-gray-400 text-sm">&copy; 2025 The Renvo. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', function() {
+        const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+        mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Billing Toggle Logic
+    const toggle = document.getElementById('billing-toggle');
+    const knob = document.getElementById('toggle-knob');
+    const priceDisplay = document.getElementById('price-display');
+    const periodDisplay = document.getElementById('period-display');
+    let isYearly = true;
+
+    function updateToggle() {
+        toggle.setAttribute('aria-checked', isYearly);
+        if (isYearly) {
+            knob.classList.add('translate-x-8');
+            knob.classList.remove('translate-x-0');
+            toggle.classList.add('bg-brand-600');
+            toggle.classList.remove('bg-gray-400');
+            priceDisplay.innerText = '$39';
+            periodDisplay.innerText = '/year';
+        } else {
+            knob.classList.remove('translate-x-8');
+            knob.classList.add('translate-x-0');
+            toggle.classList.remove('bg-brand-600');
+            toggle.classList.add('bg-gray-400');
+            priceDisplay.innerText = '$4.99';
+            periodDisplay.innerText = '/month';
+        }
+    }
+
+    toggle.addEventListener('click', () => {
+        isYearly = !isYearly;
+        updateToggle();
+    });
+
+    toggle.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            isYearly = !isYearly;
+            updateToggle();
+        }
+    });
+
+    updateToggle();
+
+    // FAQ Accordion
+    document.querySelectorAll('.faq-toggle').forEach(button => {
+        button.addEventListener('click', () => {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('.faq-icon');
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+            
+            // Close all other FAQs
+            document.querySelectorAll('.faq-toggle').forEach(otherButton => {
+                if (otherButton !== button) {
+                    otherButton.setAttribute('aria-expanded', 'false');
+                    otherButton.nextElementSibling.classList.add('hidden');
+                    otherButton.querySelector('.faq-icon').classList.remove('rotate-180');
+                }
+            });
+            
+            // Toggle current FAQ
+            button.setAttribute('aria-expanded', !isExpanded);
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        });
+    });
+</script>

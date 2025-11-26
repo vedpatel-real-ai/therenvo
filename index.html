@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Renvo | Track, Manage & Optimize Subscriptions</title>
+    <meta name="description" content="Stop wasting money on forgotten subscriptions. One dashboard. Complete clarity. AI-powered savings.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9', // Renvo Blue
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        },
+                        accent: {
+                            green: '#10b981',
+                            orange: '#f97316',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Micro-interactions */
+        .hover-lift { transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
+        .hover-lift:hover { transform: translateY(-4px); }
+        
+        /* Animation classes */
+        .fade-in-section { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; visibility: hidden; }
+        .fade-in-section.is-visible { opacity: 1; transform: none; visibility: visible; }
+        
+        /* Custom Scrollbar for mock */
+        .mock-scroll::-webkit-scrollbar { width: 4px; }
+        .mock-scroll::-webkit-scrollbar-thumb { background-color: #cbd5e1; border-radius: 4px; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 antialiased font-sans selection:bg-brand-100 selection:text-brand-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        The Renvo<span class="text-brand-500">.</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="features.html" class="text-sm font-medium text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors">Features</a>
+                    <a href="pricing.html" class="text-sm font-medium text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors">Pricing</a>
+                    <a href="index.html" class="bg-gray-900 hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-200 dark:text-gray-900 text-white px-5 py-2 rounded-full text-sm font-medium transition-all shadow-sm hover:shadow-md">Download</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="features.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-800 rounded-md">Features</a>
+                <a href="pricing.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-800 rounded-md">Pricing</a>
+                <a href="index.html" class="block mt-4 text-center bg-brand-600 text-white px-3 py-3 rounded-lg font-medium">Download App</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 lg:pt-32 lg:pb-24 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center lg:gap-16 xl:gap-24">
+                
+                <!-- Left Side: Text Content -->
+                <div class="lg:w-1/2 text-center lg:text-left z-10">
+                    <div class="inline-flex items-center px-3 py-1 rounded-full bg-brand-50 dark:bg-gray-800 border border-brand-100 dark:border-gray-700 text-brand-600 dark:text-brand-400 text-xs font-medium mb-6 fade-in-section">
+                        <span class="flex h-2 w-2 rounded-full bg-green-500 mr-2"></span>
+                        Join families saving money daily
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-gray-900 dark:text-white mb-6 fade-in-section leading-tight">
+                        Track, manage, and optimize <span class="text-brand-600">effortlessly</span>.
+                    </h1>
+                    
+                    <p class="mt-4 text-lg md:text-xl text-gray-600 dark:text-gray-300 fade-in-section max-w-2xl mx-auto lg:mx-0">
+                        Stop wasting money on forgotten subscriptions. One dashboard. Complete clarity. AI-powered savings.
+                    </p>
+                    
+                    <div class="mt-8 flex flex-col sm:flex-row justify-center lg:justify-start gap-4 fade-in-section">
+                        <button class="flex items-center justify-center bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition-all hover-lift shadow-lg">
+                            <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.74 1.18 0 2.45-1.64 3.57-1.64.58 0 2.88.11 4.11 1.8-3.57 2.05-2.74 7.24.86 9.04-.66 1.67-1.69 3.37-3.62 3.03zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+                            <div class="text-left">
+                                <div class="text-[10px] leading-none">Download on the</div>
+                                <div class="text-sm font-bold font-sans leading-tight">App Store</div>
+                            </div>
+                        </button>
+                        <button class="flex items-center justify-center bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition-all hover-lift shadow-lg">
+                            <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186c-.185.185-.435.249-.65.175-.384-.132-.608-.567-.515-.963l1.165-4.946 11.01-4.452-11.01-4.453L2.444 2.6c-.093-.395.131-.83.515-.962.216-.073.465-.009.65.176z"/></svg>
+                            <div class="text-left">
+                                <div class="text-[10px] leading-none">Get it on</div>
+                                <div class="text-sm font-bold font-sans leading-tight">Google Play</div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Side: Phone Mock -->
+                <div class="lg:w-1/2 mt-16 lg:mt-0 flex justify-center lg:justify-end fade-in-section relative">
+                    <!-- Decorative elements behind phone -->
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-brand-500/20 rounded-full blur-3xl"></div>
+
+                    <!-- Phone Container (Scaled for cleaner look) -->
+                    <div class="relative mx-auto border-gray-900 dark:border-gray-900 bg-gray-900 border-[12px] rounded-[2.5rem] h-[600px] w-[300px] shadow-2xl flex flex-col overflow-hidden hover:scale-[1.01] transition-transform duration-500 ease-out">
+                        
+                        <!-- Notch -->
+                        <div class="absolute top-0 inset-x-0 h-6 bg-gray-900 z-50 flex justify-center">
+                            <div class="h-4 w-24 bg-black rounded-b-2xl"></div>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="h-[32px] w-[3px] bg-gray-800 absolute -left-[15px] top-[72px] rounded-l-lg"></div>
+                        <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[15px] top-[124px] rounded-l-lg"></div>
+                        <div class="h-[64px] w-[3px] bg-gray-800 absolute -right-[15px] top-[142px] rounded-r-lg"></div>
+
+                        <!-- Screen Content -->
+                        <div class="flex-1 bg-gray-50 dark:bg-gray-900 overflow-y-auto mock-scroll relative font-sans pt-10">
+                            
+                            <div class="px-5 mb-5 flex justify-between items-center">
+                                <div>
+                                    <p class="text-[10px] text-gray-400 font-medium uppercase tracking-wider">Overview</p>
+                                    <h3 class="text-lg font-bold text-gray-900 dark:text-white">My Subs</h3>
+                                </div>
+                                <div class="h-8 w-8 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden border-2 border-white dark:border-gray-800">
+                                    <svg class="w-full h-full text-gray-400" fill="currentColor" viewBox="0 0 24 24"><path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                                </div>
+                            </div>
+
+                            <div class="px-5 mb-6">
+                                <div class="bg-gradient-to-br from-brand-600 to-brand-900 rounded-2xl p-5 text-white shadow-lg shadow-brand-500/20 relative overflow-hidden">
+                                    <p class="text-brand-100 text-xs font-medium mb-1">Total Monthly Burn</p>
+                                    <h2 class="text-3xl font-bold tracking-tight">$142<span class="text-xl text-brand-200">.90</span></h2>
+                                    <div class="mt-3 flex items-center text-[10px] font-medium text-brand-100 bg-white/10 w-max px-2 py-1 rounded-lg backdrop-blur-sm border border-white/10">
+                                        <svg class="w-3 h-3 mr-1 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                                        Within budget
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="px-5 mb-5">
+                                <div class="bg-white dark:bg-gray-800 p-3 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm flex items-start space-x-3">
+                                    <div class="bg-purple-100 text-purple-600 p-1.5 rounded-lg shrink-0">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xs font-bold text-gray-900 dark:text-white">Suggestion</h4>
+                                        <p class="text-[10px] text-gray-500 mt-0.5">Switch <strong>Dropbox</strong> to annual to save money.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="px-5 space-y-3 pb-20">
+                                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-wider">Upcoming Renewals</p>
+                                
+                                <div class="flex items-center justify-between bg-white dark:bg-gray-800 p-3 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="h-8 w-8 rounded-lg bg-red-600 flex items-center justify-center text-white font-bold text-sm">N</div>
+                                        <div>
+                                            <h4 class="text-xs font-bold text-gray-900 dark:text-white">Netflix</h4>
+                                            <p class="text-[10px] text-red-500 font-medium">Renews Tomorrow</p>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <p class="text-xs font-bold text-gray-900 dark:text-white">$15.49</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center justify-between bg-white dark:bg-gray-800 p-3 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="h-8 w-8 rounded-lg bg-green-500 flex items-center justify-center text-white font-bold text-sm">S</div>
+                                        <div>
+                                            <h4 class="text-xs font-bold text-gray-900 dark:text-white">Spotify</h4>
+                                            <p class="text-[10px] text-gray-500">In 5 days</p>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <p class="text-xs font-bold text-gray-900 dark:text-white">$10.99</p>
+                                    </div>
+                                </div>
+
+                                 <div class="flex items-center justify-between bg-white dark:bg-gray-800 p-3 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 relative overflow-hidden">
+                                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-orange-500"></div>
+                                    <div class="flex items-center space-x-3 pl-1">
+                                        <div class="h-8 w-8 rounded-lg bg-blue-900 flex items-center justify-center text-white font-bold text-sm">A</div>
+                                        <div>
+                                            <h4 class="text-xs font-bold text-gray-900 dark:text-white">Adobe CC</h4>
+                                            <p class="text-[10px] text-orange-500 font-bold">Price hike detected</p>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <p class="text-xs font-bold text-gray-900 dark:text-white">$54.99</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Phone Bottom Nav -->
+                        <div class="absolute bottom-0 inset-x-0 bg-white/90 dark:bg-gray-900/90 backdrop-blur-lg border-t border-gray-200 dark:border-gray-800 h-16 px-6 flex justify-between items-start pt-3">
+                            <div class="text-brand-600 flex flex-col items-center gap-0.5">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/></svg>
+                                <span class="text-[9px] font-medium">Home</span>
+                            </div>
+                             <div class="text-gray-400 flex flex-col items-center gap-0.5">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                                <span class="text-[9px] font-medium">Stats</span>
+                            </div>
+                             <div class="text-gray-400 flex flex-col items-center gap-0.5">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                <span class="text-[9px] font-medium">Settings</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Home Indicator -->
+                        <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 h-1 w-24 bg-gray-900/20 dark:bg-white/20 rounded-full"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points Section -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">You're losing money every month</h2>
+                <p class="mt-4 text-xl text-gray-500 dark:text-gray-400">And you probably don't even know it.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center fade-in-section">
+                <div class="p-6">
+                    <div class="w-12 h-12 mx-auto bg-red-100 text-red-600 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Forgotten Subs</h3>
+                    <p class="text-gray-500">Draining money on services you stopped using months ago.</p>
+                </div>
+                <div class="p-6">
+                    <div class="w-12 h-12 mx-auto bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">No Central View</h3>
+                    <p class="text-gray-500">Scattered across bank statements and app stores. No clarity.</p>
+                </div>
+                <div class="p-6">
+                    <div class="w-12 h-12 mx-auto bg-gray-100 text-gray-600 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Missed Increases</h3>
+                    <p class="text-gray-500">Prices rise silently. You only notice after the money is gone.</p>
+                </div>
+                <div class="p-6">
+                    <div class="w-12 h-12 mx-auto bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Budget Anxiety</h3>
+                    <p class="text-gray-500">Unpredictable charges hitting your account at the worst times.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">One app. Complete financial clarity.</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover-lift fade-in-section">
+                    <div class="h-10 w-10 bg-brand-100 text-brand-600 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Track Everything</h3>
+                    <p class="text-gray-600 dark:text-gray-400">All subs in one dashboard. Auto-complete logos and instant cost breakdowns.</p>
+                </div>
+                <div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover-lift fade-in-section transition-delay-100">
+                    <div class="h-10 w-10 bg-brand-100 text-brand-600 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Never Miss Renewal</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Smart reminders before you pay. Visual timeline of upcoming charges.</p>
+                </div>
+                <div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover-lift fade-in-section transition-delay-200">
+                    <div class="h-10 w-10 bg-brand-100 text-brand-600 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Optimize & Save</h3>
+                    <p class="text-gray-600 dark:text-gray-400">AI finds forgotten subs and suggests cheaper annual plans.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Section -->
+    <section class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-brand-900 to-slate-900 opacity-50"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 fade-in-section">
+                <span class="text-brand-400 font-semibold tracking-wider uppercase text-sm">Premium Feature</span>
+                <h2 class="mt-2 text-3xl md:text-5xl font-bold text-white">Meet your AI savings coach</h2>
+                <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">Premium intelligence that transforms The Renvo from a tracker into a financial advisor.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 fade-in-section">
+                 <div class="bg-white/10 backdrop-blur-lg p-6 rounded-xl border border-white/10 hover:bg-white/15 transition">
+                    <h4 class="text-lg font-bold text-brand-300 mb-2">AI Savings Coach</h4>
+                    <p class="text-gray-300 text-sm">Suggests annual vs monthly switches to maximize value.</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-lg p-6 rounded-xl border border-white/10 hover:bg-white/15 transition">
+                    <h4 class="text-lg font-bold text-brand-300 mb-2">AI Cancel Suggestions</h4>
+                    <p class="text-gray-300 text-sm">Detects unused subscriptions you haven't opened in weeks.</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-lg p-6 rounded-xl border border-white/10 hover:bg-white/15 transition">
+                    <h4 class="text-lg font-bold text-brand-300 mb-2">Price Increase Alerts</h4>
+                    <p class="text-gray-300 text-sm">Warns before prices rise so you can decide to keep or cancel.</p>
+                </div>
+                 <div class="bg-white/10 backdrop-blur-lg p-6 rounded-xl border border-white/10 hover:bg-white/15 transition">
+                    <h4 class="text-lg font-bold text-brand-300 mb-2">Hidden Costs Detector</h4>
+                    <p class="text-gray-300 text-sm">Identifies hidden fees and taxes on your bills.</p>
+                </div>
+                 <div class="bg-white/10 backdrop-blur-lg p-6 rounded-xl border border-white/10 hover:bg-white/15 transition">
+                    <h4 class="text-lg font-bold text-brand-300 mb-2">Annual Savings Tracker</h4>
+                    <p class="text-gray-300 text-sm">Visual proof of your financial progress over time.</p>
+                </div>
+                 <div class="bg-white/10 backdrop-blur-lg p-6 rounded-xl border border-white/10 hover:bg-white/15 transition">
+                    <h4 class="text-lg font-bold text-brand-300 mb-2">Auto Cancel Links</h4>
+                    <p class="text-gray-300 text-sm">Direct paths to cancellation pages for major services.</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center fade-in-section">
+                <a href="pricing.html" class="inline-block bg-white text-brand-900 font-bold px-8 py-4 rounded-full hover:bg-gray-100 transition-colors shadow-lg">
+                    Unlock AI Intelligence &rarr;
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats / Trust Section (Refurbished without numbers) -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+             <div class="text-center mb-12 fade-in-section">
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Join thousands taking control</h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center mb-16 fade-in-section">
+                <div class="flex flex-col items-center">
+                    <div class="bg-gray-100 dark:bg-gray-800 p-3 rounded-full mb-3 text-brand-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                    </div>
+                    <div class="font-bold text-gray-900 dark:text-white">Trusted App</div>
+                    <div class="text-sm text-gray-500">Highly Rated</div>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="bg-gray-100 dark:bg-gray-800 p-3 rounded-full mb-3 text-brand-600">
+                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <div class="font-bold text-gray-900 dark:text-white">Real Savings</div>
+                    <div class="text-sm text-gray-500">Verified Results</div>
+                </div>
+                <div class="flex flex-col items-center">
+                     <div class="bg-gray-100 dark:bg-gray-800 p-3 rounded-full mb-3 text-brand-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                    </div>
+                    <div class="font-bold text-gray-900 dark:text-white">Secure Data</div>
+                    <div class="text-sm text-gray-500">Bank-Level Encryption</div>
+                </div>
+                <div class="flex flex-col items-center">
+                     <div class="bg-gray-100 dark:bg-gray-800 p-3 rounded-full mb-3 text-brand-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <div class="font-bold text-gray-900 dark:text-white">Global</div>
+                    <div class="text-sm text-gray-500">Multi-Currency Support</div>
+                </div>
+            </div>
+            
+            <!-- Testimonials -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 fade-in-section">
+                <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl">
+                    <p class="text-gray-600 dark:text-gray-300 italic">"I found monthly subscriptions I forgot about completely. The AI suggestions are definitely worth looking into."</p>
+                    <div class="mt-4 font-bold text-gray-900 dark:text-white">- Sarah M., Seattle</div>
+                </div>
+                <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl">
+                    <p class="text-gray-600 dark:text-gray-300 italic">"Finally an app that looks good and actually works. The design is so clean, it feels like a native app."</p>
+                    <div class="mt-4 font-bold text-gray-900 dark:text-white">- David K., Austin</div>
+                </div>
+                <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl">
+                    <p class="text-gray-600 dark:text-gray-300 italic">"The price increase alerts saved me from a huge hike on my streaming service. I cancelled instantly."</p>
+                    <div class="mt-4 font-bold text-gray-900 dark:text-white">- Jessica R., New York</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Simple, fair pricing</h2>
+            </div>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="bg-white dark:bg-gray-900 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 fade-in-section">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Starter</h3>
+                    <p class="text-gray-500 mt-2">Free forever</p>
+                    <div class="mt-4 text-sm text-gray-600 dark:text-gray-400">
+                        <ul class="space-y-3">
+                            <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-gray-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Track essential subscriptions</li>
+                            <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-gray-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Basic reminders</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="mt-8 block w-full bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white text-center py-3 rounded-lg font-semibold hover:bg-gray-200 transition-colors">Download Now</a>
+                </div>
+                <div class="bg-white dark:bg-gray-900 p-8 rounded-2xl border-2 border-brand-500 shadow-xl relative scale-105 fade-in-section transition-delay-100">
+                    <div class="absolute top-0 right-0 bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">RECOMMENDED</div>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Pro</h3>
+                    <p class="text-brand-600 mt-2 font-semibold">Monthly or Yearly Plans</p>
+                    <div class="mt-4 text-sm text-gray-600 dark:text-gray-400">
+                        <ul class="space-y-3">
+                            <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Unlimited subscriptions</li>
+                            <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> <b>Full AI Intelligence</b></li>
+                            <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-brand-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Custom Reports</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="mt-8 block w-full bg-brand-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-brand-700 transition-colors shadow-lg">Start Free Trial</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">Frequently Asked Questions</h2>
+            <div class="space-y-4 fade-in-section" id="faq-container">
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-4 text-left font-medium text-gray-900 dark:text-white flex justify-between items-center focus:outline-none">
+                        <span>Is my payment data secure?</span>
+                        <svg class="w-5 h-5 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-gray-600 dark:text-gray-400">
+                        Absolutely. We use industry-standard encryption. We never see or sell your financial data.
+                    </div>
+                </div>
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-4 text-left font-medium text-gray-900 dark:text-white flex justify-between items-center focus:outline-none">
+                        <span>How does the AI work?</span>
+                        <svg class="w-5 h-5 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-gray-600 dark:text-gray-400">
+                        Our AI analyzes your subscription patterns, compares them to market averages, and identifies unused services based on your input and usage frequency.
+                    </div>
+                </div>
+                 <div class="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-4 text-left font-medium text-gray-900 dark:text-white flex justify-between items-center focus:outline-none">
+                        <span>Can I cancel Premium anytime?</span>
+                        <svg class="w-5 h-5 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-gray-600 dark:text-gray-400">
+                        Yes. You can cancel instantly from your phone's subscription settings. No questions asked.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <span class="text-xl font-bold text-gray-900 dark:text-white">The Renvo<span class="text-brand-500">.</span></span>
+                <p class="mt-4 text-gray-500 text-sm">Track, manage, and optimize your subscriptions effortlessly.</p>
+                <div class="mt-4 text-sm font-medium text-brand-600 dark:text-brand-400">
+                    <a href="mailto:contact@therenvo.com">contact@therenvo.com</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold text-gray-900 dark:text-white mb-4">Product</h4>
+                <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                    <li><a href="features.html" class="hover:text-brand-600">Features</a></li>
+                    <li><a href="pricing.html" class="hover:text-brand-600">Pricing</a></li>
+                    <li><a href="index.html" class="hover:text-brand-600">Download</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-gray-900 dark:text-white mb-4">Company</h4>
+                <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                    <li><a href="#" class="hover:text-brand-600">About</a></li>
+                    <li><a href="#" class="hover:text-brand-600">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-brand-600">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-gray-200 dark:border-gray-800 text-center text-sm text-gray-500">
+            &copy; 2024 The Renvo. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('svg');
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Intersection Observer for Fade-in
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
